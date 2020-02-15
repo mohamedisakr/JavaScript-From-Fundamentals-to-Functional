@@ -1,4 +1,4 @@
-import { map, makeBroken } from "../Map-Ex-01";
+import { map, makeBroken, mutateArray } from "../Map-Ex-01";
 
 describe("map function", () => {
   it("should return an array", () => {
@@ -11,5 +11,13 @@ describe("map function", () => {
         "broken revolver"
       ])
     );
+  });
+});
+
+describe("Array Immutability ", () => {
+  it("should return the same array", () => {
+    const list = [1, 2, 3];
+    const result = mutateArray(list);
+    expect(result).toEqual(list);
   });
 });

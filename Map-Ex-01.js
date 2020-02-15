@@ -4,14 +4,37 @@ export function map(array, callback) {
   array.forEach((v, i, list) => {
     result.push(callback(v));
   });
-  //   for (let i = 0; i < array.length; i++) {
-  //     result.push(callback(array[i]));
-  //   }
   return result;
 }
-
-const weapons = ["candlestick", "lead pipe", "revolver"];
 
 export function makeBroken(item) {
   return `broken ${item}`;
 }
+
+const weapons = ["candlestick", "lead pipe", "revolver"];
+
+const list = [1, 2, 3];
+
+export function mutateArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    array[0] = array[0] * array[0];
+  }
+  return array;
+}
+
+var person = [];
+person.name = "Mrs. White";
+var who = person.name;
+console.log(who); // ??
+
+/*
+const list = [1, 2, 3];
+function mutateArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    array[0] = array[0] * array[0];
+  }
+  return array;
+}
+const result = mutateArray(list);
+console.log(result);
+// */
