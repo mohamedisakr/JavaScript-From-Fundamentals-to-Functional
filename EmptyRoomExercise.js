@@ -49,6 +49,14 @@ const newDevelopment = [
   }
 ];
 
+const notInRoom = (suspect, memo) => {
+  suspect.rooms;
+  memo.push();
+};
+
+reduce(newDevelopment, notInRoom, []);
+
+/*
 function getRooms(accumulator, currentValue) {
   return [...currentValue.rooms];
 }
@@ -56,7 +64,6 @@ function getRooms(accumulator, currentValue) {
 let allRooms = newDevelopment.reduce(getRooms, []);
 console.log(allRooms);
 
-/*
 const rooms = [
   { kitchen: false },
   { ballroom: false },
